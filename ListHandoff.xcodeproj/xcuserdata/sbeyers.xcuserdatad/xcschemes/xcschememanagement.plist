@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ListHandoff_macOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C85F327B1EDF4AB800496C59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C85F32991EDF4B3300496C59</key>
 		<dict>
 			<key>primary</key>
 			<true/>

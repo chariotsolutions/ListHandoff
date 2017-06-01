@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8287D3D1EE073AE0008AF0B /* ListTableDataSource+macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8287D3B1EE073990008AF0B /* ListTableDataSource+macOS.swift */; };
+		C8287D3F1EE074030008AF0B /* ListTableDataSource+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8287D3E1EE074030008AF0B /* ListTableDataSource+iOS.swift */; };
+		C84986251EE0341000914AD2 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84986241EE0341000914AD2 /* MasterViewController.swift */; };
+		C84986281EE0342200914AD2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84986261EE0342200914AD2 /* DetailViewController.swift */; };
+		C84986291EE0342200914AD2 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84986271EE0342200914AD2 /* DetailViewController.xib */; };
+		C849862B1EE03D6B00914AD2 /* ListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C849862A1EE03D6B00914AD2 /* ListTableDataSource.swift */; };
+		C849862C1EE03D6B00914AD2 /* ListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C849862A1EE03D6B00914AD2 /* ListTableDataSource.swift */; };
 		C85F32801EDF4AB800496C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F327F1EDF4AB800496C59 /* AppDelegate.swift */; };
 		C85F32831EDF4AB800496C59 /* ListHandoff.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C85F32811EDF4AB800496C59 /* ListHandoff.xcdatamodeld */; };
 		C85F32851EDF4AB800496C59 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F32841EDF4AB800496C59 /* MasterViewController.swift */; };
@@ -14,9 +21,21 @@
 		C85F328A1EDF4AB800496C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85F32881EDF4AB800496C59 /* Main.storyboard */; };
 		C85F328C1EDF4AB800496C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85F328B1EDF4AB800496C59 /* Assets.xcassets */; };
 		C85F328F1EDF4AB800496C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85F328D1EDF4AB800496C59 /* LaunchScreen.storyboard */; };
+		C85F329D1EDF4B3300496C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F329C1EDF4B3300496C59 /* AppDelegate.swift */; };
+		C85F32A41EDF4B3300496C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85F32A31EDF4B3300496C59 /* Assets.xcassets */; };
+		C85F32A71EDF4B3300496C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85F32A51EDF4B3300496C59 /* Main.storyboard */; };
+		C85F32AD1EDF4B9E00496C59 /* ListHandoff.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C85F32811EDF4AB800496C59 /* ListHandoff.xcdatamodeld */; };
+		C85F32AF1EDF4C2100496C59 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F32AE1EDF4C2100496C59 /* CoreDataHelper.swift */; };
+		C85F32B01EDF4D1500496C59 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F32AE1EDF4C2100496C59 /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8287D3B1EE073990008AF0B /* ListTableDataSource+macOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ListTableDataSource+macOS.swift"; path = "ListHandoff_macOS/ListTableDataSource+macOS.swift"; sourceTree = "<group>"; };
+		C8287D3E1EE074030008AF0B /* ListTableDataSource+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ListTableDataSource+iOS.swift"; path = "ListHandoff/ListTableDataSource+iOS.swift"; sourceTree = "<group>"; };
+		C84986241EE0341000914AD2 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		C84986261EE0342200914AD2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C84986271EE0342200914AD2 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		C849862A1EE03D6B00914AD2 /* ListTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableDataSource.swift; path = ListHandoff/ListTableDataSource.swift; sourceTree = "<group>"; };
 		C85F327C1EDF4AB800496C59 /* ListHandoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListHandoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85F327F1EDF4AB800496C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C85F32821EDF4AB800496C59 /* ListHandoff.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ListHandoff.xcdatamodel; sourceTree = "<group>"; };
@@ -26,10 +45,23 @@
 		C85F328B1EDF4AB800496C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C85F328E1EDF4AB800496C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C85F32901EDF4AB800496C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85F329A1EDF4B3300496C59 /* ListHandoff_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListHandoff_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85F329C1EDF4B3300496C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C85F32A31EDF4B3300496C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C85F32A61EDF4B3300496C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C85F32A81EDF4B3300496C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85F32AE1EDF4C2100496C59 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = ListHandoff/CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C85F32791EDF4AB800496C59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F32971EDF4B3300496C59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,7 +74,9 @@
 		C85F32731EDF4AB800496C59 = {
 			isa = PBXGroup;
 			children = (
+				C85F32AC1EDF4B8C00496C59 /* CoreData */,
 				C85F327E1EDF4AB800496C59 /* ListHandoff */,
+				C85F329B1EDF4B3300496C59 /* ListHandoff_macOS */,
 				C85F327D1EDF4AB800496C59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				C85F327C1EDF4AB800496C59 /* ListHandoff.app */,
+				C85F329A1EDF4B3300496C59 /* ListHandoff_macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,9 +100,34 @@
 				C85F328B1EDF4AB800496C59 /* Assets.xcassets */,
 				C85F328D1EDF4AB800496C59 /* LaunchScreen.storyboard */,
 				C85F32901EDF4AB800496C59 /* Info.plist */,
-				C85F32811EDF4AB800496C59 /* ListHandoff.xcdatamodeld */,
 			);
 			path = ListHandoff;
+			sourceTree = "<group>";
+		};
+		C85F329B1EDF4B3300496C59 /* ListHandoff_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C85F329C1EDF4B3300496C59 /* AppDelegate.swift */,
+				C85F32A31EDF4B3300496C59 /* Assets.xcassets */,
+				C85F32A51EDF4B3300496C59 /* Main.storyboard */,
+				C85F32A81EDF4B3300496C59 /* Info.plist */,
+				C84986241EE0341000914AD2 /* MasterViewController.swift */,
+				C84986261EE0342200914AD2 /* DetailViewController.swift */,
+				C84986271EE0342200914AD2 /* DetailViewController.xib */,
+			);
+			path = ListHandoff_macOS;
+			sourceTree = "<group>";
+		};
+		C85F32AC1EDF4B8C00496C59 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C85F32811EDF4AB800496C59 /* ListHandoff.xcdatamodeld */,
+				C85F32AE1EDF4C2100496C59 /* CoreDataHelper.swift */,
+				C849862A1EE03D6B00914AD2 /* ListTableDataSource.swift */,
+				C8287D3B1EE073990008AF0B /* ListTableDataSource+macOS.swift */,
+				C8287D3E1EE074030008AF0B /* ListTableDataSource+iOS.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +150,23 @@
 			productReference = C85F327C1EDF4AB800496C59 /* ListHandoff.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C85F32991EDF4B3300496C59 /* ListHandoff_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85F32A91EDF4B3300496C59 /* Build configuration list for PBXNativeTarget "ListHandoff_macOS" */;
+			buildPhases = (
+				C85F32961EDF4B3300496C59 /* Sources */,
+				C85F32971EDF4B3300496C59 /* Frameworks */,
+				C85F32981EDF4B3300496C59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ListHandoff_macOS;
+			productName = ListHandoff_macOS;
+			productReference = C85F329A1EDF4B3300496C59 /* ListHandoff_macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +178,11 @@
 				ORGANIZATIONNAME = Chariot;
 				TargetAttributes = {
 					C85F327B1EDF4AB800496C59 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3GLKR344GU;
+						ProvisioningStyle = Automatic;
+					};
+					C85F32991EDF4B3300496C59 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3GLKR344GU;
 						ProvisioningStyle = Automatic;
@@ -121,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				C85F327B1EDF4AB800496C59 /* ListHandoff */,
+				C85F32991EDF4B3300496C59 /* ListHandoff_macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -136,6 +219,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C85F32981EDF4B3300496C59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85F32A41EDF4B3300496C59 /* Assets.xcassets in Resources */,
+				C84986291EE0342200914AD2 /* DetailViewController.xib in Resources */,
+				C85F32A71EDF4B3300496C59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -143,10 +236,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85F32AF1EDF4C2100496C59 /* CoreDataHelper.swift in Sources */,
+				C849862B1EE03D6B00914AD2 /* ListTableDataSource.swift in Sources */,
 				C85F32831EDF4AB800496C59 /* ListHandoff.xcdatamodeld in Sources */,
 				C85F32801EDF4AB800496C59 /* AppDelegate.swift in Sources */,
 				C85F32851EDF4AB800496C59 /* MasterViewController.swift in Sources */,
 				C85F32871EDF4AB800496C59 /* DetailViewController.swift in Sources */,
+				C8287D3F1EE074030008AF0B /* ListTableDataSource+iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85F32961EDF4B3300496C59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84986251EE0341000914AD2 /* MasterViewController.swift in Sources */,
+				C849862C1EE03D6B00914AD2 /* ListTableDataSource.swift in Sources */,
+				C85F32AD1EDF4B9E00496C59 /* ListHandoff.xcdatamodeld in Sources */,
+				C84986281EE0342200914AD2 /* DetailViewController.swift in Sources */,
+				C85F32B01EDF4D1500496C59 /* CoreDataHelper.swift in Sources */,
+				C85F329D1EDF4B3300496C59 /* AppDelegate.swift in Sources */,
+				C8287D3D1EE073AE0008AF0B /* ListTableDataSource+macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +277,14 @@
 				C85F328E1EDF4AB800496C59 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C85F32A51EDF4B3300496C59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C85F32A61EDF4B3300496C59 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -293,6 +411,40 @@
 			};
 			name = Release;
 		};
+		C85F32AA1EDF4B3300496C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3GLKR344GU;
+				INFOPLIST_FILE = ListHandoff_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chariot.ListHandoff-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C85F32AB1EDF4B3300496C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3GLKR344GU;
+				INFOPLIST_FILE = ListHandoff_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chariot.ListHandoff-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -312,6 +464,16 @@
 				C85F32951EDF4AB800496C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85F32A91EDF4B3300496C59 /* Build configuration list for PBXNativeTarget "ListHandoff_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85F32AA1EDF4B3300496C59 /* Debug */,
+				C85F32AB1EDF4B3300496C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -322,7 +484,8 @@
 				C85F32821EDF4AB800496C59 /* ListHandoff.xcdatamodel */,
 			);
 			currentVersion = C85F32821EDF4AB800496C59 /* ListHandoff.xcdatamodel */;
-			path = ListHandoff.xcdatamodeld;
+			name = ListHandoff.xcdatamodeld;
+			path = ListHandoff/ListHandoff.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
