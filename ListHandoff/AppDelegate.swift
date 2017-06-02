@@ -60,6 +60,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
         return false
     }
+    
+    // MARK: Handoff
+    
+    func application(_ application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
+        // let iOS notify the user of any activity that is happening
+        return false
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        var handled = false
+        
+        if let date = userActivity.userInfo?["timestamp"] as? NSDate {
+            let splitViewController = self.window?.rootViewController as? UISplitViewController
+            let masterNavigationController = splitViewController?.viewControllers[0] as? UINavigationController
+            
+            if let controller = masterNavigationController?.topViewController as? MasterViewController {
+                let event = CoreDataHelper.shared.insertNewObject()
+                event.timestamp = date
+                
+                controller.dataSource.userDidSelect(event: event, notifyDelegate: true)
+                handled = true
+            }
+        }
+        
+        return handled
+    }
+    
+    func application(_ application: UIApplication, didFailToContinueUserActivityWithType userActivityType: String, error: Error) {
+        let alert = UIAlertController(title: "Unable to continue activity", message: error.localizedDescription, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(ok)
+        
+        window?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
 
 }
 

@@ -47,6 +47,10 @@ extension ListTableDataSource: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        userDidSelect(event: event(atIndexPath: indexPath), notifyDelegate: false)
+    }
+    
     func configureCell(_ cell: UITableViewCell, withEvent event: Event) {
         cell.textLabel!.text = event.timestamp!.description
     }

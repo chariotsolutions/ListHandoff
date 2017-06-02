@@ -51,5 +51,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.chariotsolutions.ListHandoff.viewTimestamp</string>
+	</array>
 </dict>
 </plist>

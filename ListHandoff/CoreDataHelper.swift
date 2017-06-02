@@ -51,7 +51,8 @@ class CoreDataHelper: NSObject {
         return container
     }()
     
-    func insertNewObject() {
+    @discardableResult
+    func insertNewObject() -> Event {
         let context = persistentContainer.viewContext
         let newEvent = Event(context: context)
         
@@ -60,6 +61,8 @@ class CoreDataHelper: NSObject {
         
         // Save the context.
         saveContext()
+        
+        return newEvent
     }
     
     // MARK: - Core Data Saving support

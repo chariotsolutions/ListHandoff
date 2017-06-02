@@ -28,5 +28,9 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.chariotsolutions.ListHandoff.viewTimestamp</string>
+	</array>
 </dict>
 </plist>

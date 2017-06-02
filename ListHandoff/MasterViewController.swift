@@ -21,6 +21,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         dataSource.managedObjectContext = CoreDataHelper.shared.persistentContainer.viewContext
         dataSource.tableView = tableView
+        dataSource.delegate = self
         tableView.delegate = dataSource
         tableView.dataSource = dataSource
 
@@ -36,6 +37,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+        
+        if clearsSelectionOnViewWillAppear {
+            dataSource.userDidSelect(event: nil, notifyDelegate: false)
+        }
+        
         super.viewWillAppear(animated)
     }
 
@@ -56,5 +62,17 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func insertNewObject() {
         CoreDataHelper.shared.insertNewObject()
     }
+}
+
+extension MasterViewController: ListTableDataSourceDelegate {
+    
+    func didSelect(event: Event?) {
+        if let event = event {
+            let indexPath = dataSource.fetchedResultsController.indexPath(forObject: event)
+            tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+            performSegue(withIdentifier: "showDetail", sender: event)
+        }
+    }
+    
 }
 

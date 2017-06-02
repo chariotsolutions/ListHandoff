@@ -28,6 +28,8 @@ class ListTableDataSource: NSObject, NSFetchedResultsControllerDelegate {
     var tableView: NSTableView?
     #endif
     
+    var currentActivity: NSUserActivity?
+    
     // MARK: - Fetched results controller
     
     var fetchedResultsController: NSFetchedResultsController<Event> {
@@ -79,4 +81,55 @@ class ListTableDataSource: NSObject, NSFetchedResultsControllerDelegate {
     func event(atIndexPath indexPath: IndexPath) -> Event {
         return fetchedResultsController.object(at: indexPath)
     }
+    
+    func userDidSelect(event: Event?, notifyDelegate notify: Bool) {
+        if notify {
+            delegate?.didSelect(event: event)
+        }
+
+        if let event = event {
+            // The user selected an event so we need to create a new activity
+            let userInfo = ["timestamp": event.timestamp ?? NSDate()]
+            
+            if let existingActivity = currentActivity {
+                // An activity already exists so we will just update it
+                existingActivity.userInfo = userInfo
+                existingActivity.needsSave = true
+            } else {
+                // we need to create a new activity
+                currentActivity = NSUserActivity(activityType: "com.chariotsolutions.ListHandoff.viewTimestamp")
+                currentActivity?.userInfo = userInfo
+                currentActivity?.title = "View Timestamp"
+            }
+            
+            currentActivity?.becomeCurrent()
+        } else {
+            // The user de-selected an event so we need to destroy the previous activity
+            currentActivity?.invalidate()
+            currentActivity = nil
+        }
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -68,6 +68,42 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // If we got here, it is time to quit.
         return .terminateNow
     }
+    
+    // MARK: Handoff
+    
+    func application(_ application: NSApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
+        // let iOS notify the user of any activity that is happening
+        return false
+    }
+    
+    func application(_ application: NSApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]) -> Void) -> Bool {
+        var handled = false
+        
+        if let date = userActivity.userInfo?["timestamp"] as? NSDate {
+            let splitViewController = application.windows[0].contentViewController as? NSSplitViewController
+            let master = splitViewController?.splitViewItems[0].viewController as? MasterViewController
+            
+            if let controller = master {
+                let event = CoreDataHelper.shared.insertNewObject()
+                event.timestamp = date
+                
+                controller.dataSource.userDidSelect(event: event, notifyDelegate: true)
+                handled = true
+            }
+        }
+        
+        return handled
+    }
+    
+    func application(_ application: NSApplication, didFailToContinueUserActivityWithType userActivityType: String, error: Error) {
+        
+        let alert = NSAlert()
+        alert.messageText = "Unable to continue activity"
+        alert.informativeText = error.localizedDescription
+        alert.addButton(withTitle: "OK")
+        
+        _ = alert.runModal()
+    }
 
 }
 

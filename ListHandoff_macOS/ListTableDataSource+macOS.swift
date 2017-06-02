@@ -37,7 +37,7 @@ extension ListTableDataSource: NSTableViewDelegate, NSTableViewDataSource {
             print("nothing selected")
         }
         
-        delegate?.didSelect(event: event)
+        userDidSelect(event: event, notifyDelegate: true)
     }
     
 }
